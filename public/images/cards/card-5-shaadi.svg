@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 580" width="400" height="580">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#311042"/>
+      <stop offset="100%" stop-color="#190624"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="580" rx="24" fill="url(#bg5)"/>
+  <!-- Gold Brocade Saree Circle -->
+  <circle cx="200" cy="230" r="110" fill="#4a154b" stroke="#f59e0b" stroke-width="6" stroke-dasharray="10,6"/>
+  <circle cx="200" cy="230" r="95" fill="#b91c1c" stroke="#fef08a" stroke-width="2"/>
+  <!-- Golden Palms -->
+  <path d="M90 290 Q60 170 120 120 Q110 210 140 250 Z" fill="#fbbf24" opacity="0.9"/>
+  <path d="M310 290 Q340 170 280 120 Q290 210 260 250 Z" fill="#fbbf24" opacity="0.9"/>
+  <!-- Couple Illustration -->
+  <circle cx="185" cy="200" r="14" fill="#fbbf24"/>
+  <circle cx="215" cy="205" r="13" fill="#f87171"/>
+  <path d="M170 220 Q185 210 200 220 L205 280 L165 280 Z" fill="#d97706"/>
+  <path d="M200 220 Q215 210 230 220 L235 280 L195 280 Z" fill="#dc2626"/>
+  <!-- Garland -->
+  <path d="M175 225 Q200 270 225 225" fill="none" stroke="#fef08a" stroke-width="5" stroke-dasharray="4,2"/>
+  <!-- Title text -->
+  <text x="200" y="395" text-anchor="middle" fill="#ffffff" font-family="'Cinzel', serif" font-size="34" font-weight="700" letter-spacing="2">Shaadi</text>
+  <text x="200" y="435" text-anchor="middle" fill="#fde047" font-family="'Luxurious Script', cursive" font-size="28">Sacred Vedic Rituals</text>
+  <text x="200" y="475" text-anchor="middle" fill="#e2e8f0" font-family="'Inter', sans-serif" font-size="11" letter-spacing="1.5">BWSSB RAJATHA BHAVAN</text>
+  <text x="200" y="500" text-anchor="middle" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Malleswaram, Bangalore</text>
+  <text x="200" y="535" text-anchor="middle" fill="#f59e0b" font-family="'Cinzel', serif" font-size="13" font-weight="600" letter-spacing="3">19 · 11 · 2026</text>
+</svg>

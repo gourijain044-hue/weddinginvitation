@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 580" width="400" height="580">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#14342b"/>
+      <stop offset="100%" stop-color="#0a1f19"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="580" rx="24" fill="url(#bg3)"/>
+  <!-- Islamic/Vedic Arch -->
+  <path d="M40 580 L40 220 Q40 80 200 40 Q360 80 360 220 L360 580 Z" fill="#1b4539" stroke="#d4af37" stroke-width="2"/>
+  <path d="M55 580 L55 225 Q55 95 200 60 Q345 95 345 225 L345 580 Z" fill="none" stroke="rgba(212,175,55,0.4)" stroke-width="1" stroke-dasharray="4,4"/>
+  <!-- Big Solitaire Ring Medallion -->
+  <circle cx="200" cy="220" r="65" fill="#fdfcf7" stroke="#d4af37" stroke-width="4"/>
+  <circle cx="200" cy="220" r="55" fill="#f8fafc"/>
+  <!-- Couple inside ring -->
+  <circle cx="188" cy="205" r="10" fill="#c2410c"/>
+  <circle cx="212" cy="210" r="9" fill="#1e293b"/>
+  <path d="M178 220 C182 235 198 238 200 248 C202 238 218 235 222 220 Z" fill="#d97706"/>
+  <!-- Diamond gem on top -->
+  <polygon points="200,140 216,155 184,155" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.5"/>
+  <polygon points="184,155 216,155 200,165" fill="#bae6fd" stroke="#38bdf8" stroke-width="1.5"/>
+  <!-- Text -->
+  <text x="200" y="340" text-anchor="middle" fill="#ffffff" font-family="'Luxurious Script', cursive" font-size="44">Looking</text>
+  <text x="200" y="380" text-anchor="middle" fill="#ffffff" font-family="'Cinzel', serif" font-size="20" font-weight="600" letter-spacing="2">FORWARD TO</text>
+  <text x="200" y="420" text-anchor="middle" fill="#fde047" font-family="'Cinzel', serif" font-size="24" font-weight="700" letter-spacing="3">SEE YOU</text>
+  <line x1="120" y1="450" x2="280" y2="450" stroke="#d4af37" stroke-width="1.5"/>
+  <text x="200" y="485" text-anchor="middle" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="12" letter-spacing="2">WEDDING INVITATION</text>
+  <text x="200" y="515" text-anchor="middle" fill="#ffffff" font-family="'Cinzel', serif" font-size="13">BANGALORE · 2026</text>
+</svg>

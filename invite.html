@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Dharani &amp; Manu — Wedding Invitation</title>
+  <link rel="stylesheet" href="style.css?v=53">
+</head>
+<body class="motion-ready">
+  <!-- Background Wedding Audio -->
+  <audio id="weddingAudio" src="audio/wedding-music.mp3?v=2" preload="auto" loop autoplay playsinline></audio>
+
+  <div class="site-shell">
+    <!-- HERO SECTION WITH SCROLL TRAVEL -->
+    <section class="hero" id="hero">
+      <div class="hero-sticky" id="heroStage">
+        <!-- Fixed Sunset Sky Background: NEVER MOVES -->
+        <picture class="hero-bg-wrap">
+          <source media="(max-width: 1024px)" srcset="images/sky.webp">
+          <img src="images/home-bg.png" alt="Sunset sky background" class="hero-bg" aria-hidden="true" fetchpriority="high" decoding="async">
+        </picture>
+
+        <!-- Couple Title & Date -->
+        <div class="hero-title">
+          <p>DHARANI</p>
+          <span><i></i> WEDS <i></i></span>
+          <p>MANU</p>
+          <em>19 · 11 · 2026</em>
+        </div>
+
+        <!-- Scroll / Tap Cue -->
+        <div class="scroll-cue" id="heroScrollCue" role="button" tabindex="0" aria-label="Tap to enter wedding invitation and play music">
+          <span>TAP OR SCROLL TO ENTER</span>
+          <b></b>
+        </div>
+
+        <!-- Temple Sticker: Moves up and scales as user scrolls -->
+        <img src="images/opening-temple-v3.webp" alt="Temple" class="hero-temple" id="heroTemple" fetchpriority="high" decoding="async">
+
+        <!-- Foreground Rocks & Deer Sticker: Emerges from bottom and fades in -->
+        <picture class="hero-rocks-wrap">
+          <source media="(min-width: 768px)" srcset="images/foreground-rock-trees-desktop-green-deer.webp">
+          <img src="images/foreground-rock-trees.webp" alt="Foreground Rocks and Deer" class="hero-rocks" id="heroRocks" decoding="async">
+        </picture>
+
+        <!-- Atmospheric Vignette -->
+        <div class="hero-vignette" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- INVITATION MANDAP SECTION (Starts right below where the first section finishes) -->
+    <section class="invitation-section reveal-section" data-motion="true">
+      <picture>
+        <source media="(min-width: 768px)" srcset="images/invitation-mandap-desktop.webp">
+        <img class="section-art invite-mandap" src="images/invitation-mandap-mobile.webp" alt="" decoding="async">
+      </picture>
+      <div class="invite-copy">
+        <img src="images/ganesh.webp" alt="Auspicious brass deepam and lotus emblem" decoding="async">
+        <p>With the blessings of Sri Venkateswara and our beloved elders,</p>
+        <h2>We invite you</h2>
+        <p>to celebrate the auspicious wedding of</p>
+        <h1>DHARANI</h1>
+        <strong>&</strong>
+        <h1>MANU</h1>
+        <p>as they take seven sacred steps toward a lifetime together.</p>
+        <div class="invite-date">
+          <b>19</b>
+          <span>NOVEMBER<br>2026</span>
+          <b>07:00</b>
+        </div>
+        <p class="invite-venue">
+          BWSSB Rajatha Bhavan<br>
+          Malleshwaram, Bangalore
+        </p>
+        <h3>Join us for the celebrations</h3>
+      </div>
+    </section>
+
+    <!-- CELEBRATION / EVENTS SECTION -->
+    <section class="event-section" id="eventSection" aria-label="Wedding celebrations">
+      <div class="event-sticky">
+        <picture>
+          <source media="(max-width: 767px)" srcset="images/event-lock-frame-tirupati-mobile-v3.webp">
+          <img class="section-art" src="images/event-lock-frame-tirupati-v3.webp" alt="" loading="lazy" decoding="async">
+        </picture>
+        <div class="event-card">
+          <div class="slideshow" role="region" aria-label="Wedding Ceremony">
+            <img class="active" src="images/event-engagement-illustration.webp" alt="Wedding Ceremony illustration" loading="lazy" decoding="async">
+          </div>
+          <div class="event-copy">
+            <small class="event-eyebrow">THE SACRED UNION</small>
+            <h2 class="event-title">Wedding Ceremony</h2>
+            <div class="event-rule"></div>
+            <div class="event-meta">
+              <span><b>01</b><span class="meta-date">19 November 2026</span></span>
+              <span><b>02</b><span class="meta-time">07:00 PM</span></span>
+              <span><b>03</b><span class="meta-venue">BWSSB Rajatha Bhavan, Malleshwaram, Bangalore</span></span>
+            </div>
+            <p class="event-description">A sacred union under traditional Vedic rituals, holy fire, and the eternal seven steps of love and togetherness.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUPLE TABLEAU / LAYERED PAPER-CUT TEMPLE SECTION -->
+    <section id="tableau" class="couple-section reveal-section" data-motion="true" aria-label="Layered Tirupati paper-cut wedding tableau">
+      <div class="paper-tableau-sticky">
+        <div class="paper-tableau-art">
+          <img class="paper-tableau-backdrop" src="images/tableau-paper-backdrop-v4.webp" alt="" loading="lazy" decoding="async">
+          <div class="paper-tableau-layer paper-tableau-temple">
+            <img src="images/tableau-gopuram-paper-v4.webp" alt="Tirumala-inspired dimensional paper-cut temple ensemble" loading="lazy" decoding="async">
+          </div>
+          <div class="paper-tableau-layer paper-tableau-mandap">
+            <img src="images/tableau-mandap-paper-v4.webp" alt="Wide dimensional Andhra wedding mandap with carved beams" loading="lazy" decoding="async">
+          </div>
+          <div class="paper-tableau-layer paper-tableau-foreground" aria-hidden="true">
+            <img src="images/tableau-foreground-paper-v4.webp" alt="" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="paper-tableau-layer paper-tableau-couple">
+          <img src="images/tableau-couple-caricature-v4.webp" alt="Paper-cut caricature of Dharani and Manu exchanging garlands" loading="lazy" decoding="async">
+        </div>
+        <!-- Flower Petal Celebration Poppers -->
+        <div class="tableau-popper tableau-popper-left" aria-hidden="true">
+          <i style="--i:0; --petal-x:-310px; --petal-y:-110px; --petal-r:0deg;"></i>
+          <i style="--i:1; --petal-x:-243px; --petal-y:-153px; --petal-r:71deg;"></i>
+          <i style="--i:2; --petal-x:-176px; --petal-y:-196px; --petal-r:142deg;"></i>
+          <i style="--i:3; --petal-x:-109px; --petal-y:-239px; --petal-r:213deg;"></i>
+          <i style="--i:4; --petal-x:-42px; --petal-y:-282px; --petal-r:284deg;"></i>
+          <i style="--i:5; --petal-x:25px; --petal-y:-325px; --petal-r:355deg;"></i>
+          <i style="--i:6; --petal-x:92px; --petal-y:-368px; --petal-r:66deg;"></i>
+          <i style="--i:7; --petal-x:159px; --petal-y:-411px; --petal-r:137deg;"></i>
+          <i style="--i:8; --petal-x:226px; --petal-y:-454px; --petal-r:208deg;"></i>
+          <i style="--i:9; --petal-x:293px; --petal-y:-127px; --petal-r:279deg;"></i>
+          <i style="--i:10; --petal-x:-260px; --petal-y:-170px; --petal-r:350deg;"></i>
+          <i style="--i:11; --petal-x:-193px; --petal-y:-213px; --petal-r:61deg;"></i>
+          <i style="--i:12; --petal-x:-126px; --petal-y:-256px; --petal-r:132deg;"></i>
+          <i style="--i:13; --petal-x:-59px; --petal-y:-299px; --petal-r:203deg;"></i>
+          <i style="--i:14; --petal-x:8px; --petal-y:-342px; --petal-r:274deg;"></i>
+          <i style="--i:15; --petal-x:75px; --petal-y:-385px; --petal-r:345deg;"></i>
+          <i style="--i:16; --petal-x:142px; --petal-y:-428px; --petal-r:56deg;"></i>
+          <i style="--i:17; --petal-x:209px; --petal-y:-471px; --petal-r:127deg;"></i>
+          <i style="--i:18; --petal-x:276px; --petal-y:-144px; --petal-r:198deg;"></i>
+          <i style="--i:19; --petal-x:-277px; --petal-y:-187px; --petal-r:269deg;"></i>
+          <i style="--i:20; --petal-x:-210px; --petal-y:-230px; --petal-r:340deg;"></i>
+          <i style="--i:21; --petal-x:-143px; --petal-y:-273px; --petal-r:51deg;"></i>
+          <i style="--i:22; --petal-x:-76px; --petal-y:-316px; --petal-r:122deg;"></i>
+          <i style="--i:23; --petal-x:-9px; --petal-y:-359px; --petal-r:193deg;"></i>
+          <i style="--i:24; --petal-x:58px; --petal-y:-402px; --petal-r:264deg;"></i>
+          <i style="--i:25; --petal-x:125px; --petal-y:-445px; --petal-r:335deg;"></i>
+          <i style="--i:26; --petal-x:192px; --petal-y:-118px; --petal-r:46deg;"></i>
+          <i style="--i:27; --petal-x:259px; --petal-y:-161px; --petal-r:117deg;"></i>
+          <i style="--i:28; --petal-x:-294px; --petal-y:-204px; --petal-r:188deg;"></i>
+          <i style="--i:29; --petal-x:-227px; --petal-y:-247px; --petal-r:259deg;"></i>
+        </div>
+        <div class="tableau-popper tableau-popper-right" aria-hidden="true">
+          <i style="--i:0; --petal-x:-310px; --petal-y:-110px; --petal-r:0deg;"></i>
+          <i style="--i:1; --petal-x:-243px; --petal-y:-153px; --petal-r:71deg;"></i>
+          <i style="--i:2; --petal-x:-176px; --petal-y:-196px; --petal-r:142deg;"></i>
+          <i style="--i:3; --petal-x:-109px; --petal-y:-239px; --petal-r:213deg;"></i>
+          <i style="--i:4; --petal-x:-42px; --petal-y:-282px; --petal-r:284deg;"></i>
+          <i style="--i:5; --petal-x:25px; --petal-y:-325px; --petal-r:355deg;"></i>
+          <i style="--i:6; --petal-x:92px; --petal-y:-368px; --petal-r:66deg;"></i>
+          <i style="--i:7; --petal-x:159px; --petal-y:-411px; --petal-r:137deg;"></i>
+          <i style="--i:8; --petal-x:226px; --petal-y:-454px; --petal-r:208deg;"></i>
+          <i style="--i:9; --petal-x:293px; --petal-y:-127px; --petal-r:279deg;"></i>
+          <i style="--i:10; --petal-x:-260px; --petal-y:-170px; --petal-r:350deg;"></i>
+          <i style="--i:11; --petal-x:-193px; --petal-y:-213px; --petal-r:61deg;"></i>
+          <i style="--i:12; --petal-x:-126px; --petal-y:-256px; --petal-r:132deg;"></i>
+          <i style="--i:13; --petal-x:-59px; --petal-y:-299px; --petal-r:203deg;"></i>
+          <i style="--i:14; --petal-x:8px; --petal-y:-342px; --petal-r:274deg;"></i>
+          <i style="--i:15; --petal-x:75px; --petal-y:-385px; --petal-r:345deg;"></i>
+          <i style="--i:16; --petal-x:142px; --petal-y:-428px; --petal-r:56deg;"></i>
+          <i style="--i:17; --petal-x:209px; --petal-y:-471px; --petal-r:127deg;"></i>
+          <i style="--i:18; --petal-x:276px; --petal-y:-144px; --petal-r:198deg;"></i>
+          <i style="--i:19; --petal-x:-277px; --petal-y:-187px; --petal-r:269deg;"></i>
+          <i style="--i:20; --petal-x:-210px; --petal-y:-230px; --petal-r:340deg;"></i>
+          <i style="--i:21; --petal-x:-143px; --petal-y:-273px; --petal-r:51deg;"></i>
+          <i style="--i:22; --petal-x:-76px; --petal-y:-316px; --petal-r:122deg;"></i>
+          <i style="--i:23; --petal-x:-9px; --petal-y:-359px; --petal-r:193deg;"></i>
+          <i style="--i:24; --petal-x:58px; --petal-y:-402px; --petal-r:264deg;"></i>
+          <i style="--i:25; --petal-x:125px; --petal-y:-445px; --petal-r:335deg;"></i>
+          <i style="--i:26; --petal-x:192px; --petal-y:-118px; --petal-r:46deg;"></i>
+          <i style="--i:27; --petal-x:259px; --petal-y:-161px; --petal-r:117deg;"></i>
+          <i style="--i:28; --petal-x:-294px; --petal-y:-204px; --petal-r:188deg;"></i>
+          <i style="--i:29; --petal-x:-227px; --petal-y:-247px; --petal-r:259deg;"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR STORY / BRIDE & GROOM SECTION -->
+    <section id="story" class="story-section reveal-section" data-motion="true" aria-label="Dharani and Manu love story">
+      <picture>
+        <source media="(max-width: 767px)" srcset="images/story-frame-tirupati-mobile-v2.webp">
+        <img class="section-art" src="images/story-frame-tirupati-v2.webp" alt="" loading="lazy" decoding="async">
+      </picture>
+      <div class="story-heading">
+        <h2>Our Story</h2>
+      </div>
+      <div class="story-gallery">
+        <figure class="story-shot shot-1">
+          <img src="images/story-1.webp" alt="Dharani and Manu together beneath the Tirupati hills" loading="lazy" decoding="async">
+        </figure>
+        <img class="gold-frame" src="images/gold-frame.png" alt="" loading="lazy" decoding="async">
+      </div>
+      <div class="story-copy">
+        <p>Some journeys begin with a grand moment. Ours began quietly—with a conversation that felt familiar, laughter that came easily, and a calm certainty that grew each day.</p>
+        <p>Between Tirupati mornings and dreams of the road ahead, we found friendship, courage and home in one another. On the nineteenth of November, beneath the seven hills, we begin our forever.</p>
+        <span>Dharani &amp; Manu</span>
+      </div>
+    </section>
+
+    <!-- RSVP SECTION -->
+    <section id="rsvp" class="rsvp-section reveal-section" data-motion="true" aria-label="Wedding RSVP">
+      <picture>
+        <source media="(max-width: 767px)" srcset="images/rsvp-tirupati-mobile-v2.webp">
+        <img class="section-art" src="images/rsvp-tirupati-v2.webp" alt="" loading="lazy" decoding="async">
+      </picture>
+      <div class="rsvp-copy">
+        <small>RSVP</small>
+        <h2><em>Will</em> you<br>join us?</h2>
+        <p>We have pictured this day with your laughter in it—the hugs, the happy tears, and the stories we will still be talking about years from now.</p>
+        <p class="rsvp-personal">Come stand beside us beneath the seven hills and make our first day of forever feel complete.</p>
+        <span class="rsvp-signature">With love, Dharani &amp; Manu</span>
+        <a class="whatsapp-button" href="https://wa.me/?text=I%20would%20love%20to%20join%20Dharani%20and%20Manu%27s%20wedding." target="_blank" rel="noreferrer">
+          <span>◉</span> RSVP on WhatsApp
+        </a>
+        <b>19 · 11 · 2026</b>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM / OUR MEMORIES SECTION -->
+    <section id="instagram" class="instagram-section reveal-section" data-motion="true" aria-label="Our Memories">
+      <picture>
+        <source media="(max-width: 767px)" srcset="images/instagram-tirupati-mobile-v2.webp">
+        <img class="section-art" src="images/instagram-tirupati-v2.webp" alt="Ornate temple frame for wedding memories" loading="lazy" decoding="async">
+      </picture>
+      <div class="instagram-copy">
+        <small>THE CELEBRATION AWAITS</small>
+        <h2>Find Your Way</h2>
+        <h3>To Our Wedding</h3>
+        <figure class="prewedding-thumb venue-map-card" role="button" tabindex="0" aria-label="Open Google Maps directions to BWSSB Rajatha Bhavan, Malleshwaram">
+          <img src="images/venue-map.png" alt="Map view of BWSSB Rajatha Bhavan, Malleshwaram, Bangalore" class="venue-map-img" loading="lazy" decoding="async">
+          <div class="map-pin-badge" aria-hidden="true">
+            <div class="map-pin-pulse"></div>
+            <div class="map-pin-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <span class="map-pin-label">BWSSB Rajatha Bhavan</span>
+          </div>
+          <figcaption>
+            <small>MALLESHWARAM · BANGALORE</small>
+            <strong>BWSSB Rajatha Bhavan</strong>
+          </figcaption>
+        </figure>
+        <a class="directions-btn" href="https://www.google.com/maps/dir/13.0338842,77.6891819/BWSSB+Rajatha+Bhavana,+8th,+19th+Cross+Rd,+Malleshwaram,+Bengaluru,+Karnataka+560012/@12.8905254,77.6621388,10.1z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bae3d7fe2c5046b:0x7dc2af7faf8d611b!2m2!1d77.562176!2d13.0116862?entry=ttu" target="_blank" rel="noreferrer">
+          Get directions <b>↗</b>
+        </a>
+      </div>
+    </section>
+
+    <!-- CLOSING / COUNTDOWN & FINALE SECTION -->
+    <section id="closing" class="closing-section reveal-section" data-motion="true" aria-label="Wedding Countdown and Finale">
+      <picture>
+        <source media="(max-width: 767px)" srcset="images/closing-tirupati-mobile-v2.webp">
+        <img class="section-art" src="images/closing-tirupati-v2.webp" alt="Carved Seshachalam hills framing a Tirupati-inspired temple" loading="lazy" decoding="async">
+      </picture>
+      <div class="finale-image-trail" aria-hidden="true"></div>
+      <div class="closing-copy">
+        <small>UNTIL OUR FOREVER</small>
+        <h2>Counting the days</h2>
+        <div class="countdown" aria-label="Wedding countdown">
+          <div class="count-group">
+            <div class="count-card" id="countDays">12</div>
+            <span>Days</span>
+            <b aria-hidden="true">:</b>
+          </div>
+          <div class="count-group">
+            <div class="count-card" id="countHours">10</div>
+            <span>Hours</span>
+            <b aria-hidden="true">:</b>
+          </div>
+          <div class="count-group">
+            <div class="count-card" id="countMinutes">47</div>
+            <span>Minutes</span>
+            <b aria-hidden="true">:</b>
+          </div>
+          <div class="count-group">
+            <div class="count-card" id="countSeconds">14</div>
+            <span>Seconds</span>
+          </div>
+        </div>
+        <button type="button" class="magic-button" aria-label="Toggle magical flower shower">
+          Touch here for magic <span>✦</span>
+        </button>
+        <div class="closing-personal-note">
+          <small>A LITTLE NOTE FROM US</small>
+          <h3>We saved a place for you.</h3>
+          <p>Come for the vows, stay for the laughter, and leave with a heart full of memories. This chapter would not be the same without you in it.</p>
+          <strong>See you there.</strong>
+        </div>
+        <p>We cannot wait<br>to celebrate with you.</p>
+        <a href="#top" class="closing-couple-link" aria-label="Return to top">
+          Dharani <i>&amp;</i> Manu
+        </a>
+      </div>
+      <div class="petals" aria-hidden="true">
+        <i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i>
+        <i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i>
+        <i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i>
+        <i style="--i:12"></i><i style="--i:13"></i><i style="--i:14"></i><i style="--i:15"></i>
+        <i style="--i:16"></i><i style="--i:17"></i><i style="--i:18"></i><i style="--i:19"></i>
+        <i style="--i:20"></i><i style="--i:21"></i><i style="--i:22"></i><i style="--i:23"></i>
+        <i style="--i:24"></i><i style="--i:25"></i><i style="--i:26"></i><i style="--i:27"></i>
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

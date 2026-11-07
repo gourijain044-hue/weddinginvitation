@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 580" width="400" height="580">
+  <defs>
+    <linearGradient id="bg7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#df94a7"/>
+      <stop offset="100%" stop-color="#c46a83"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="580" rx="24" fill="url(#bg7)"/>
+  <!-- Ornate White Marble Jharokha frame -->
+  <path d="M70 120 Q200 40 330 120 L330 450 Q200 490 70 450 Z" fill="#ffffff" filter="drop-shadow(0 15px 25px rgba(0,0,0,0.2))"/>
+  <!-- Mirror Inner Opening -->
+  <path d="M100 150 Q200 85 300 150 L300 420 Q200 450 100 420 Z" fill="#fdf2f4" stroke="#d4af37" stroke-width="2"/>
+  <!-- Couple inside frame -->
+  <circle cx="185" cy="250" r="22" fill="#d97706"/>
+  <circle cx="215" cy="255" r="20" fill="#dc2626"/>
+  <path d="M160 280 Q185 270 210 280 L215 360 L155 360 Z" fill="#d97706"/>
+  <path d="M195 280 Q215 270 240 280 L245 360 L190 360 Z" fill="#dc2626"/>
+  <!-- Royal safa and veil -->
+  <ellipse cx="185" cy="235" rx="14" ry="8" fill="#fef08a"/>
+  <!-- Text -->
+  <text x="200" y="495" text-anchor="middle" fill="#ffffff" font-family="'Cinzel', serif" font-size="20" font-weight="700" letter-spacing="2">ROYAL HERITAGE</text>
+  <text x="200" y="525" text-anchor="middle" fill="#fde047" font-family="'Luxurious Script', cursive" font-size="28">A Lifetime of Love</text>
+</svg>

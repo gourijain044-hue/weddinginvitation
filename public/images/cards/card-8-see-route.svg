@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 580" width="400" height="580">
+  <defs>
+    <linearGradient id="bg8" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f4b43"/>
+      <stop offset="100%" stop-color="#0f2924"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="580" rx="24" fill="url(#bg8)"/>
+  <!-- Damask Lines -->
+  <circle cx="200" cy="220" r="130" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+  <circle cx="200" cy="220" r="100" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+  <!-- Text -->
+  <text x="200" y="100" text-anchor="middle" fill="#a7f3d0" font-family="'Cinzel', serif" font-size="30" font-weight="700" letter-spacing="3">SEE THE</text>
+  <text x="200" y="145" text-anchor="middle" fill="#ffffff" font-family="'Cinzel', serif" font-size="34" font-weight="700" letter-spacing="4">ROUTE</text>
+  <text x="200" y="180" text-anchor="middle" fill="#6ee7b7" font-family="'Inter', sans-serif" font-size="11" letter-spacing="2">CLICK TO OPEN THE MAP</text>
+  <!-- Golden Pin Compass -->
+  <circle cx="200" cy="250" r="32" fill="#0f2924" stroke="#f59e0b" stroke-width="3"/>
+  <circle cx="200" cy="250" r="16" fill="#f59e0b"/>
+  <!-- Vintage Car Front -->
+  <rect x="90" y="380" width="220" height="90" rx="24" fill="#38bdf8" stroke="#ffffff" stroke-width="2"/>
+  <!-- Windshield -->
+  <path d="M120 380 L140 330 L260 330 L280 380 Z" fill="#bae6fd" stroke="#ffffff" stroke-width="2"/>
+  <!-- Headlights -->
+  <circle cx="125" cy="420" r="16" fill="#fef08a" stroke="#fff" stroke-width="2"/>
+  <circle cx="275" cy="420" r="16" fill="#fef08a" stroke="#fff" stroke-width="2"/>
+  <!-- Grille -->
+  <rect x="165" y="405" width="70" height="45" rx="6" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5"/>
+  <text x="200" y="530" text-anchor="middle" fill="#ffffff" font-family="'Cinzel', serif" font-size="13" letter-spacing="2">GOOGLE MAPS DIRECTIONS</text>
+</svg>
