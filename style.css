@@ -482,6 +482,16 @@ html, body {
 }
 
 @media (max-width: 767px) {
+  .motion-ready .reveal-section .invite-copy,
+  .motion-ready .reveal-section .story-heading,
+  .motion-ready .reveal-section .story-gallery,
+  .motion-ready .reveal-section .story-copy,
+  .motion-ready .reveal-section .rsvp-copy,
+  .motion-ready .reveal-section .instagram-copy,
+  .motion-ready .reveal-section .closing-copy {
+    translate: 0 28px;
+    transition: opacity 0.45s ease-out, translate 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
   .invitation-section {
     min-height: max(720px, 177.78vw);
     height: auto;

@@ -43,60 +43,66 @@ const eventData = [
   }
 ];
 
-if (customBride || customGroom || customDate || customVenue) {
-  document.addEventListener('DOMContentLoaded', () => {
-    // Update Hero Titles
-    const heroBride = document.querySelector('.hero-title p:first-of-type');
-    const heroGroom = document.querySelector('.hero-title p:last-of-type');
-    const heroDate = document.querySelector('.hero-title em');
-    if (heroBride && customBride) heroBride.textContent = customBride.toUpperCase();
-    if (heroGroom && customGroom) heroGroom.textContent = customGroom.toUpperCase();
-    if (heroDate && customDate) heroDate.textContent = customDate;
+function applyCustomizations() {
+  if (!customBride && !customGroom && !customDate && !customVenue) return;
 
-    // Update Mandap Invite
-    const inviteH1s = document.querySelectorAll('.invite-copy h1');
-    if (inviteH1s.length >= 2) {
-      if (customBride) inviteH1s[0].textContent = customBride.toUpperCase();
-      if (customGroom) inviteH1s[1].textContent = customGroom.toUpperCase();
-    }
-    const inviteVenue = document.querySelector('.invite-venue');
-    if (inviteVenue && (customVenue || customAddress)) {
-      inviteVenue.innerHTML = `${customVenue || ''}<br>${customAddress || ''}`;
-    }
+  // Update Hero Titles
+  const heroBride = document.querySelector('.hero-title p:first-of-type');
+  const heroGroom = document.querySelector('.hero-title p:last-of-type');
+  const heroDate = document.querySelector('.hero-title em');
+  if (heroBride && customBride) heroBride.textContent = customBride.toUpperCase();
+  if (heroGroom && customGroom) heroGroom.textContent = customGroom.toUpperCase();
+  if (heroDate && customDate) heroDate.textContent = customDate;
 
-    // Update closing couple link
-    const closingLink = document.querySelector('.closing-couple-link');
-    if (closingLink && customBride && customGroom) {
-      closingLink.innerHTML = `${customBride} <i>&amp;</i> ${customGroom}`;
-    }
+  // Update Mandap Invite
+  const inviteH1s = document.querySelectorAll('.invite-copy h1');
+  if (inviteH1s.length >= 2) {
+    if (customBride) inviteH1s[0].textContent = customBride.toUpperCase();
+    if (customGroom) inviteH1s[1].textContent = customGroom.toUpperCase();
+  }
+  const inviteVenue = document.querySelector('.invite-venue');
+  if (inviteVenue && (customVenue || customAddress)) {
+    inviteVenue.innerHTML = `${customVenue || ''}<br>${customAddress || ''}`;
+  }
 
-    // Update story signatures
-    const storySpan = document.querySelector('.story-copy span');
-    if (storySpan && customBride && customGroom) {
-      storySpan.textContent = `${customBride} & ${customGroom}`;
-    }
+  // Update closing couple link
+  const closingLink = document.querySelector('.closing-couple-link');
+  if (closingLink && customBride && customGroom) {
+    closingLink.innerHTML = `${customBride} <i>&amp;</i> ${customGroom}`;
+  }
 
-    const rsvpSignature = document.querySelector('.rsvp-signature');
-    if (rsvpSignature && customBride && customGroom) {
-      rsvpSignature.textContent = `With love, ${customBride} & ${customGroom}`;
-    }
+  // Update story signatures
+  const storySpan = document.querySelector('.story-copy span');
+  if (storySpan && customBride && customGroom) {
+    storySpan.textContent = `${customBride} & ${customGroom}`;
+  }
 
-    // Update WhatsApp button
-    const waBtn = document.querySelector('.whatsapp-button');
-    if (waBtn && customBride && customGroom) {
-      waBtn.href = `https://wa.me/?text=I%20would%20love%20to%20join%20${encodeURIComponent(customBride)}%20and%20${encodeURIComponent(customGroom)}%27s%20wedding.`;
-    }
+  const rsvpSignature = document.querySelector('.rsvp-signature');
+  if (rsvpSignature && customBride && customGroom) {
+    rsvpSignature.textContent = `With love, ${customBride} & ${customGroom}`;
+  }
 
-    // Update map link & labels
-    const mapBtn = document.querySelector('.directions-btn');
-    if (mapBtn && customMapUrl) {
-      mapBtn.href = customMapUrl;
-    }
-    const venueLabel = document.querySelector('.prewedding-thumb figcaption strong');
-    if (venueLabel && customVenue) {
-      venueLabel.textContent = customVenue;
-    }
-  });
+  // Update WhatsApp button
+  const waBtn = document.querySelector('.whatsapp-button');
+  if (waBtn && customBride && customGroom) {
+    waBtn.href = `https://wa.me/?text=I%20would%20love%20to%20join%20${encodeURIComponent(customBride)}%20and%20${encodeURIComponent(customGroom)}%27s%20wedding.`;
+  }
+
+  // Update map link & labels
+  const mapBtn = document.querySelector('.directions-btn');
+  if (mapBtn && customMapUrl) {
+    mapBtn.href = customMapUrl;
+  }
+  const venueLabel = document.querySelector('.prewedding-thumb figcaption strong');
+  if (venueLabel && customVenue) {
+    venueLabel.textContent = customVenue;
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', applyCustomizations);
+} else {
+  applyCustomizations();
 }
 
 let currentCardIndex = -1;
@@ -144,14 +150,16 @@ function measureLayout() {
   isMobile = vw <= 767;
   isTablet = vw >= 768 && vw <= 1100 && vh > vw;
   isDesktop = vw >= 761;
-  heroTravel = isMobile ? 1600 : 2000;
+  heroTravel = hero ? Math.max(1, hero.offsetHeight - vh) : (isMobile ? 1400 : 2000);
 
   if (tableauSec) {
     const r = tableauSec.getBoundingClientRect();
     tableauOffsetTop = r.top + (window.pageYOffset || document.documentElement.scrollTop || 0);
     tableauScrollDist = Math.max(1, tableauSec.offsetHeight - vh);
-    const mTarget = mandapEl ? mandapEl.offsetTop + mandapEl.offsetHeight * 0.8 : vh * (isDesktop ? 0.66 : 0.84);
-    const cHeight = coupleEl ? coupleEl.offsetHeight : 0;
+    const mHeight = mandapEl && mandapEl.offsetHeight > 50 ? mandapEl.offsetHeight : (isDesktop ? vh * 0.45 : vh * 0.38);
+    const mTop = mandapEl && mandapEl.offsetTop > 0 ? mandapEl.offsetTop : (isDesktop ? vh * 0.22 : vh * 0.54);
+    const mTarget = mTop + mHeight * 0.8;
+    const cHeight = coupleEl && coupleEl.offsetHeight > 50 ? coupleEl.offsetHeight : (isDesktop ? 220 : 160);
     mandapBaseTargetY = mTarget - cHeight - 4;
     coupleStartY = isDesktop ? vh * 0.45 : vh * 0.29;
   }
@@ -205,7 +213,9 @@ function updateScrollAnimations() {
 
   // 2. COUPLE TABLEAU SECTION SCROLL ANIMATION
   if (tableauSec) {
-    const f = clamp((scrollY - tableauOffsetTop) / tableauScrollDist, 0, 1);
+    const r = tableauSec.getBoundingClientRect();
+    const currentTableauScroll = -r.top;
+    const f = clamp(currentTableauScroll / tableauScrollDist, 0, 1);
     if (f !== lastTableauProgress && ((f > 0 && f < 1) || lastTableauProgress !== f)) {
       lastTableauProgress = f;
       const settleProgress = isDesktop ? 0.75 : 0.98;
@@ -239,7 +249,17 @@ function updateScrollAnimations() {
   }
 }
 
-// 4. Reveal Sections via IntersectionObserver (Zero layout thrashing on scroll)
+// 4. Reveal Sections via IntersectionObserver & Dual Scroll Check
+function checkAllReveals() {
+  const currentVh = window.innerHeight;
+  revealSections.forEach((sec) => {
+    const rect = sec.getBoundingClientRect();
+    if (rect.top < currentVh * 1.15 && rect.bottom > -80) {
+      sec.classList.add('is-visible');
+    }
+  });
+}
+
 if ('IntersectionObserver' in window) {
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -248,19 +268,23 @@ if ('IntersectionObserver' in window) {
       }
     });
   }, {
-    rootMargin: '0px 0px -8% 0px',
-    threshold: 0.08
+    rootMargin: '120px 0px 120px 0px',
+    threshold: 0
   });
   revealSections.forEach((sec) => revealObserver.observe(sec));
 } else {
   revealSections.forEach((sec) => sec.classList.add('is-visible'));
 }
 
+// Initial check on load
+checkAllReveals();
+
 let ticking = false;
 function onScroll() {
   if (!ticking) {
     requestAnimationFrame(() => {
       updateScrollAnimations();
+      checkAllReveals();
       ticking = false;
     });
     ticking = true;
@@ -283,12 +307,15 @@ window.addEventListener('resize', () => {
 document.addEventListener('DOMContentLoaded', () => {
   measureLayout();
   updateScrollAnimations();
+  checkAllReveals();
 });
 window.addEventListener('load', () => {
   measureLayout();
   updateScrollAnimations();
+  checkAllReveals();
 });
 updateScrollAnimations();
+checkAllReveals();
 
 // 3D Pointer Parallax on Desktop (Throttled with rAF)
 if (tableauSec) {
