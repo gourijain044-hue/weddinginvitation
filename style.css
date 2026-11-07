@@ -341,7 +341,7 @@ html, body {
    ========================================================================== */
 .invitation-section {
   z-index: 2;
-  background: 0 0;
+  background: #081d22;
   place-items: start center;
   min-height: max(1800px, 133.333vw);
   margin-top: -100px;
@@ -1394,6 +1394,7 @@ html, body {
    RSVP SECTION
    ========================================================================== */
 .rsvp-section {
+  background: #09221d;
   min-height: max(900px, 100svh);
   position: relative;
   overflow: hidden;
