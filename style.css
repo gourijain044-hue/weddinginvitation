@@ -461,17 +461,19 @@ html, body {
   font: 400 42px / 1 'Luxurious Script', cursive;
 }
 
-/* Scroll reveal transition */
-.motion-ready .reveal-section .invite-copy {
-  opacity: 0;
-  transition: opacity .9s cubic-bezier(.2, .7, .2, 1), translate 1.05s cubic-bezier(.16, 1, .3, 1);
-  translate: 0 72px;
-  will-change: opacity, translate;
-}
+/* Scroll reveal transition - Desktop only */
+@media (min-width: 768px) {
+  .motion-ready .reveal-section .invite-copy {
+    opacity: 0;
+    transition: opacity .9s cubic-bezier(.2, .7, .2, 1), translate 1.05s cubic-bezier(.16, 1, .3, 1);
+    translate: 0 72px;
+    will-change: opacity, translate;
+  }
 
-.motion-ready .reveal-section.is-visible .invite-copy {
-  opacity: 1;
-  translate: 0;
+  .motion-ready .reveal-section.is-visible .invite-copy {
+    opacity: 1;
+    translate: 0;
+  }
 }
 
 /* Responsive adjustments */
@@ -489,8 +491,10 @@ html, body {
   .motion-ready .reveal-section .rsvp-copy,
   .motion-ready .reveal-section .instagram-copy,
   .motion-ready .reveal-section .closing-copy {
-    translate: 0 28px;
-    transition: opacity 0.45s ease-out, translate 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 1 !important;
+    translate: 0 !important;
+    transform: none !important;
+    transition: none !important;
   }
   .invitation-section {
     min-height: max(720px, 177.78vw);
@@ -1365,29 +1369,31 @@ html, body {
   }
 }
 
-/* Scroll reveal for Story Section */
-.motion-ready .reveal-section .story-heading,
-.motion-ready .reveal-section .story-gallery,
-.motion-ready .reveal-section .story-copy {
-  opacity: 0;
-  transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), translate 1.05s cubic-bezier(0.16, 1, 0.3, 1);
-  translate: 0 72px;
-  will-change: opacity, translate;
-}
+/* Scroll reveal for Story Section - Desktop only */
+@media (min-width: 768px) {
+  .motion-ready .reveal-section .story-heading,
+  .motion-ready .reveal-section .story-gallery,
+  .motion-ready .reveal-section .story-copy {
+    opacity: 0;
+    transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), translate 1.05s cubic-bezier(0.16, 1, 0.3, 1);
+    translate: 0 72px;
+    will-change: opacity, translate;
+  }
 
-.motion-ready .reveal-section.is-visible .story-heading,
-.motion-ready .reveal-section.is-visible .story-gallery,
-.motion-ready .reveal-section.is-visible .story-copy {
-  opacity: 1;
-  translate: 0;
-}
+  .motion-ready .reveal-section.is-visible .story-heading,
+  .motion-ready .reveal-section.is-visible .story-gallery,
+  .motion-ready .reveal-section.is-visible .story-copy {
+    opacity: 1;
+    translate: 0;
+  }
 
-.motion-ready .story-section .story-gallery {
-  transition-delay: 0.12s;
-}
+  .motion-ready .story-section .story-gallery {
+    transition-delay: 0.12s;
+  }
 
-.motion-ready .story-section .story-copy {
-  transition-delay: 0.22s;
+  .motion-ready .story-section .story-copy {
+    transition-delay: 0.22s;
+  }
 }
 
 /* ==========================================================================
@@ -1567,17 +1573,19 @@ html, body {
   }
 }
 
-/* Scroll reveal for RSVP Section */
-.motion-ready .reveal-section .rsvp-copy {
-  opacity: 0;
-  transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), translate 1.05s cubic-bezier(0.16, 1, 0.3, 1);
-  translate: 0 72px;
-  will-change: opacity, translate;
-}
+/* Scroll reveal for RSVP Section - Desktop only */
+@media (min-width: 768px) {
+  .motion-ready .reveal-section .rsvp-copy {
+    opacity: 0;
+    transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), translate 1.05s cubic-bezier(0.16, 1, 0.3, 1);
+    translate: 0 72px;
+    will-change: opacity, translate;
+  }
 
-.motion-ready .reveal-section.is-visible .rsvp-copy {
-  opacity: 1;
-  translate: 0;
+  .motion-ready .reveal-section.is-visible .rsvp-copy {
+    opacity: 1;
+    translate: 0;
+  }
 }
 
 /* ==========================================================================
@@ -1906,17 +1914,19 @@ html, body {
   }
 }
 
-/* Scroll reveal for Instagram Section */
-.motion-ready .reveal-section .instagram-copy {
-  opacity: 0;
-  transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), translate 1.05s cubic-bezier(0.16, 1, 0.3, 1);
-  translate: 0 72px;
-  will-change: opacity, translate;
-}
+/* Scroll reveal for Instagram Section - Desktop only */
+@media (min-width: 768px) {
+  .motion-ready .reveal-section .instagram-copy {
+    opacity: 0;
+    transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), translate 1.05s cubic-bezier(0.16, 1, 0.3, 1);
+    translate: 0 72px;
+    will-change: opacity, translate;
+  }
 
-.motion-ready .reveal-section.is-visible .instagram-copy {
-  opacity: 1;
-  translate: 0;
+  .motion-ready .reveal-section.is-visible .instagram-copy {
+    opacity: 1;
+    translate: 0;
+  }
 }
 
 /* ==========================================================================
@@ -2307,21 +2317,23 @@ html, body {
   }
 }
 
-/* Scroll reveal for Closing Section */
-.motion-ready .reveal-section .closing-copy {
-  opacity: 0;
-  transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), translate 1.05s cubic-bezier(0.16, 1, 0.3, 1);
-  translate: 0 72px;
-  will-change: opacity, translate;
-}
+/* Scroll reveal for Closing Section - Desktop only */
+@media (min-width: 768px) {
+  .motion-ready .reveal-section .closing-copy {
+    opacity: 0;
+    transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), translate 1.05s cubic-bezier(0.16, 1, 0.3, 1);
+    translate: 0 72px;
+    will-change: opacity, translate;
+  }
 
-.motion-ready .reveal-section.is-visible .closing-copy {
-  opacity: 1;
-  translate: 0;
-}
+  .motion-ready .reveal-section.is-visible .closing-copy {
+    opacity: 1;
+    translate: 0;
+  }
 
-.motion-ready .closing-section.is-visible .count-card {
-  animation: 0.75s cubic-bezier(0.16, 1, 0.3, 1) both count-arrive;
+  .motion-ready .closing-section.is-visible .count-card {
+    animation: 0.75s cubic-bezier(0.16, 1, 0.3, 1) both count-arrive;
+  }
 }
 
 .motion-ready .closing-section.is-visible .count-group:nth-child(2) .count-card {

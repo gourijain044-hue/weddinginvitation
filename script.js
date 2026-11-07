@@ -251,16 +251,23 @@ function updateScrollAnimations() {
 
 // 4. Reveal Sections via IntersectionObserver & Dual Scroll Check
 function checkAllReveals() {
+  if (isMobile) {
+    revealSections.forEach((sec) => sec.classList.add('is-visible'));
+    return;
+  }
   const currentVh = window.innerHeight;
   revealSections.forEach((sec) => {
     const rect = sec.getBoundingClientRect();
-    if (rect.top < currentVh * 1.15 && rect.bottom > -80) {
+    if (rect.top < currentVh * 1.3 && rect.bottom > -200) {
       sec.classList.add('is-visible');
     }
   });
 }
 
-if ('IntersectionObserver' in window) {
+if (isMobile) {
+  // Mobile: Immediately show all sections for fast and fluid scrolling
+  revealSections.forEach((sec) => sec.classList.add('is-visible'));
+} else if ('IntersectionObserver' in window) {
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -268,7 +275,7 @@ if ('IntersectionObserver' in window) {
       }
     });
   }, {
-    rootMargin: '120px 0px 120px 0px',
+    rootMargin: '180px 0px 180px 0px',
     threshold: 0
   });
   revealSections.forEach((sec) => revealObserver.observe(sec));

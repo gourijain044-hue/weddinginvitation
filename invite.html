@@ -4,11 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Dharani &amp; Manu — Wedding Invitation</title>
-  <link rel="stylesheet" href="style.css?v=56">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700&family=Cinzel:wght@400;500;600&family=DM+Sans:wght@400;500;600&family=Italiana&family=Luxurious+Script&family=Noto+Serif+Telugu:wght@400;600&display=swap">
+  <link rel="preload" as="image" href="images/sky.webp" type="image/webp">
+  <link rel="preload" as="image" href="images/opening-temple-v3.webp" type="image/webp">
+  <link rel="stylesheet" href="style.css?v=57">
 </head>
 <body class="motion-ready">
-  <!-- Background Wedding Audio -->
-  <audio id="weddingAudio" src="audio/wedding-music.mp3?v=2" preload="auto" loop autoplay playsinline></audio>
+  <!-- Background Wedding Audio (buffered on user gesture to save mobile bandwidth) -->
+  <audio id="weddingAudio" src="audio/wedding-music.mp3?v=2" preload="none" loop playsinline></audio>
 
   <div class="site-shell">
     <!-- HERO SECTION WITH SCROLL TRAVEL -->
@@ -240,7 +245,7 @@
         <h2>Find Your Way</h2>
         <h3>To Our Wedding</h3>
         <figure class="prewedding-thumb venue-map-card" role="button" tabindex="0" aria-label="Open Google Maps directions to BWSSB Rajatha Bhavan, Malleshwaram">
-          <img src="images/venue-map.png" alt="Map view of BWSSB Rajatha Bhavan, Malleshwaram, Bangalore" class="venue-map-img" decoding="async">
+          <img src="images/venue-map.jpg" alt="Map view of BWSSB Rajatha Bhavan, Malleshwaram, Bangalore" class="venue-map-img" decoding="async">
           <div class="map-pin-badge" aria-hidden="true">
             <div class="map-pin-pulse"></div>
             <div class="map-pin-icon">
