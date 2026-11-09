@@ -183,10 +183,10 @@ function updateScrollAnimations() {
       const o = 0;
 
       const templeY = isMobile
-        ? Math.max(0, vh * 0.44 * (1 - progress))
+        ? Math.max(0, vh * 0.28 * (1 - progress))
         : (vh * (i - progress * a) + o);
       const templeScale = isMobile
-        ? (0.72 + progress * 0.28)
+        ? (0.76 + progress * 0.24)
         : (0.7 + progress * 0.4);
 
       const treesTravel = isMobile

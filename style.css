@@ -18,6 +18,10 @@
   box-sizing: border-box;
 }
 
+img {
+  height: auto;
+}
+
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
@@ -223,6 +227,8 @@ html, body {
   left: 50%;
   bottom: -330px;
   width: min(1180px, 86vw);
+  height: auto;
+  max-width: none;
   transform-origin: 50% 100%;
   transform: translate3d(-50%, var(--hero-temple-y, 54vh), 0) scale(var(--hero-temple-scale, 0.7));
   filter: drop-shadow(0 -20px 40px rgba(35, 22, 10, 0.25));
@@ -322,13 +328,16 @@ html, body {
     height: 34px;
   }
   .hero-temple {
-    width: 110%;
+    width: min(86vw, 360px);
+    height: auto;
+    max-width: none;
     bottom: 0;
     transform-origin: 50% 100%;
-    transform: translate3d(-50%, var(--hero-temple-y, 44vh), 0) scale(var(--hero-temple-scale, 0.72));
+    transform: translate3d(-50%, var(--hero-temple-y, 28vh), 0) scale(var(--hero-temple-scale, 0.76));
   }
   .hero-rocks {
     width: 125%;
+    height: auto;
     max-width: none;
     left: 50%;
     bottom: 0;
