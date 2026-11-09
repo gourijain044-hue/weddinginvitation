@@ -323,14 +323,15 @@ html, body {
   }
   .hero-temple {
     width: 120%;
-    bottom: -115px;
+    bottom: 0;
+    transform-origin: 50% 100%;
   }
   .hero-rocks {
     width: 130%;
     min-height: 82%;
     left: 50%;
     bottom: 0;
-    transform: translate3d(-50%, var(--hero-trees-y, 50vh), 0) scale(1.06);
+    transform: translate3d(-50%, var(--hero-trees-y, 0px), 0) scale(1.06);
   }
 }
 
