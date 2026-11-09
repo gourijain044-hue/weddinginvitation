@@ -61,7 +61,7 @@ html, body {
   top: 0;
   width: 100%;
   height: 100vh;
-  height: 100dvh;
+  height: 100svh;
   overflow: hidden;
   pointer-events: none;
 }
@@ -322,18 +322,19 @@ html, body {
     height: 34px;
   }
   .hero-temple {
-    width: 120%;
+    width: 110%;
     bottom: 0;
     transform-origin: 50% 100%;
-    transform: translate3d(-50%, var(--hero-temple-y, 36vh), 0) scale(var(--hero-temple-scale, 0.72));
+    transform: translate3d(-50%, var(--hero-temple-y, 44vh), 0) scale(var(--hero-temple-scale, 0.72));
   }
   .hero-rocks {
-    width: 130%;
-    min-height: 82%;
+    width: 125%;
+    max-width: none;
     left: 50%;
     bottom: 0;
     transform-origin: 50% 100%;
-    transform: translate3d(-50%, var(--hero-trees-y, 15vh), 0) scale(1.06);
+    transform: translate3d(-50%, var(--hero-trees-y, 0px), 0);
+    opacity: var(--hero-trees-opacity, 1);
   }
 }
 
@@ -344,7 +345,7 @@ html, body {
    ========================================================================== */
 .invitation-section {
   z-index: 2;
-  background: #081d22;
+  background: #f5efe4;
   place-items: start center;
   min-height: max(1800px, 133.333vw);
   margin-top: -100px;
@@ -503,6 +504,7 @@ html, body {
     height: auto;
     margin-top: -60px;
     padding: 0;
+    background: #f5efe4;
   }
   .invite-copy {
     width: 66%;
@@ -932,7 +934,7 @@ html, body {
   --tableau-foreground-x: 0px;
   --tableau-foreground-pointer-y: 0px;
   z-index: 4;
-  background: #0b555c;
+  background: #deb88e;
   height: 432svh;
   min-height: 2400px;
   position: relative;
@@ -942,7 +944,7 @@ html, body {
 .paper-tableau-sticky {
   isolation: isolate;
   perspective: 1200px;
-  background: #0b555c;
+  background: #deb88e;
   width: 100%;
   height: 100svh;
   min-height: 640px;
@@ -957,7 +959,7 @@ html, body {
   height: 220%;
   transform: translate3d(0, var(--tableau-art-y), 0);
   will-change: transform;
-  background: #0b555c;
+  background: #deb88e;
   position: absolute;
   inset: 0 0 auto;
   overflow: hidden;
@@ -1126,14 +1128,17 @@ html, body {
   .couple-section {
     height: 220svh;
     min-height: 1100px;
+    background: #deb88e;
   }
   .paper-tableau-sticky {
     min-height: 100svh;
     height: 100svh;
+    background: #deb88e;
   }
   .paper-tableau-art {
     height: 100%;
     transform: none;
+    background: #deb88e;
   }
   .paper-tableau-temple {
     width: min(88vw, 480px);
@@ -1145,6 +1150,9 @@ html, body {
   }
   .paper-tableau-couple {
     width: clamp(140px, 40vw, 210px);
+    top: 50svh;
+    opacity: 1 !important;
+    transform: translate3d(-50%, 0, 60px);
   }
   .paper-tableau-foreground {
     width: min(120vw, 680px);
@@ -1423,7 +1431,7 @@ html, body {
    RSVP SECTION
    ========================================================================== */
 .rsvp-section {
-  background: #09221d;
+  background: #4a101b;
   min-height: max(900px, 100svh);
   position: relative;
   overflow: hidden;
@@ -1539,6 +1547,7 @@ html, body {
     height: auto;
     position: relative;
     padding: 0;
+    background: #4a101b;
   }
   .rsvp-section .section-art {
     object-position: center top;
@@ -1960,6 +1969,17 @@ html, body {
   min-height: 2500px;
   position: relative;
   overflow: hidden;
+}
+
+.closing-section::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: var(--sandal);
+  pointer-events: none;
 }
 
 .closing-section > picture {

@@ -183,7 +183,7 @@ function updateScrollAnimations() {
       const o = 0;
 
       const templeY = isMobile
-        ? Math.max(0, vh * 0.36 * (1 - progress))
+        ? Math.max(0, vh * 0.44 * (1 - progress))
         : (vh * (i - progress * a) + o);
       const templeScale = isMobile
         ? (0.72 + progress * 0.28)
@@ -193,9 +193,11 @@ function updateScrollAnimations() {
         ? (1 - progress)
         : Math.max(0, 1 - Math.min(1, (progress - 0.12) / 0.82));
       const treesY = isMobile
-        ? Math.max(0, treesTravel * vh * 0.15)
+        ? 0
         : (treesTravel * vh * 0.50);
-      const treesOpacity = clamp((progress - 0.08) * 2.8, 0, 1);
+      const treesOpacity = isMobile
+        ? 1
+        : clamp((progress - 0.08) * 2.8, 0, 1);
 
       const titleY = -progress * vh * (isTablet ? 0.38 : 0.3);
       const titleScale = 1 - progress * 0.12;
@@ -308,15 +310,19 @@ function onScroll() {
 
 window.addEventListener('scroll', onScroll, { passive: true });
 
+let lastWindowWidth = window.innerWidth;
 let resizeTimer = null;
 window.addEventListener('resize', () => {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(() => {
-    measureLayout();
-    lastHeroProgress = -1;
-    lastTableauProgress = -1;
-    updateScrollAnimations();
-  }, 100);
+  if (Math.abs(window.innerWidth - lastWindowWidth) > 30) {
+    lastWindowWidth = window.innerWidth;
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      measureLayout();
+      lastHeroProgress = -1;
+      lastTableauProgress = -1;
+      updateScrollAnimations();
+    }, 120);
+  }
 }, { passive: true });
 
 document.addEventListener('DOMContentLoaded', () => {
