@@ -214,9 +214,11 @@ function updateScrollAnimations() {
       target.style.setProperty('--hero-title-opacity', titleOpacity.toFixed(3));
       target.style.setProperty('--hero-cue-opacity', cueOpacity.toFixed(3));
 
-      if (inviteMandap) {
+      if (inviteMandap && !isMobile) {
         const drift = (0.5 - progress) * 20;
         inviteMandap.style.transform = `translate3d(0, ${drift.toFixed(1)}px, 0) scale(1.015)`;
+      } else if (inviteMandap && isMobile) {
+        inviteMandap.style.transform = 'none';
       }
     }
   }

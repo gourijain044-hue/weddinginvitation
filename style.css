@@ -65,7 +65,8 @@ html, body {
   top: 0;
   width: 100%;
   height: 100vh;
-  height: 100svh;
+  height: 100dvh;
+  min-height: 100%;
   overflow: hidden;
   pointer-events: none;
 }
@@ -285,7 +286,8 @@ html, body {
 /* Mobile responsive alignment */
 @media (max-width: 767px) {
   .hero {
-    height: calc(1400px + 100svh);
+    height: calc(1400px + 100vh);
+    height: calc(1400px + 100dvh);
   }
   .hero-title {
     width: 92%;
@@ -340,7 +342,7 @@ html, body {
     height: auto;
     max-width: none;
     left: 50%;
-    bottom: 0;
+    bottom: -35px;
     transform-origin: 50% 100%;
     transform: translate3d(-50%, var(--hero-trees-y, 35vh), 0);
     opacity: var(--hero-trees-opacity, 0);
@@ -511,7 +513,7 @@ html, body {
   .invitation-section {
     min-height: max(720px, 177.78vw);
     height: auto;
-    margin-top: -60px;
+    margin-top: -2px;
     padding: 0;
     background: #f5efe4;
   }
@@ -775,11 +777,13 @@ html, body {
 /* Event Section - Mobile (Single Vertical Card Stack matching Image 2) */
 @media (max-width: 767px) {
   .event-section {
-    min-height: 100svh;
-    height: 100svh;
+    min-height: max(720px, 177.78vw);
+    min-height: 100dvh;
+    height: auto;
     position: relative;
     overflow: hidden;
     padding: 0;
+    background: var(--maroon);
   }
   .event-sticky {
     width: 100%;
@@ -944,7 +948,8 @@ html, body {
   --tableau-foreground-pointer-y: 0px;
   z-index: 4;
   background: #deb88e;
-  height: 432svh;
+  height: 432vh;
+  height: 432dvh;
   min-height: 2400px;
   position: relative;
   overflow: visible;
@@ -955,7 +960,8 @@ html, body {
   perspective: 1200px;
   background: #deb88e;
   width: 100%;
-  height: 100svh;
+  height: 100vh;
+  height: 100dvh;
   min-height: 640px;
   position: sticky;
   top: 0;
@@ -1135,13 +1141,15 @@ html, body {
 /* Mobile styles */
 @media (max-width: 767px) {
   .couple-section {
-    height: 220svh;
+    height: calc(1100px + 100vh);
+    height: calc(1100px + 100dvh);
     min-height: 1100px;
     background: #deb88e;
   }
   .paper-tableau-sticky {
-    min-height: 100svh;
-    height: 100svh;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 100%;
     background: #deb88e;
   }
   .paper-tableau-art {
