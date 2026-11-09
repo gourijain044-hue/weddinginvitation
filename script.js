@@ -182,11 +182,19 @@ function updateScrollAnimations() {
       const a = isTablet ? 0.89 : 0.81;
       const o = 0;
 
-      const templeY = isMobile ? 0 : (vh * (i - progress * a) + o);
-      const templeScale = isMobile ? (0.64 + progress * 0.36) : (0.7 + progress * 0.4);
+      const templeY = isMobile
+        ? Math.max(0, vh * 0.36 * (1 - progress))
+        : (vh * (i - progress * a) + o);
+      const templeScale = isMobile
+        ? (0.72 + progress * 0.28)
+        : (0.7 + progress * 0.4);
 
-      const treesTravel = isMobile ? 0 : Math.max(0, 1 - Math.min(1, (progress - 0.12) / 0.82));
-      const treesY = isMobile ? 0 : treesTravel * vh * 0.50;
+      const treesTravel = isMobile
+        ? (1 - progress)
+        : Math.max(0, 1 - Math.min(1, (progress - 0.12) / 0.82));
+      const treesY = isMobile
+        ? Math.max(0, treesTravel * vh * 0.15)
+        : (treesTravel * vh * 0.50);
       const treesOpacity = clamp((progress - 0.08) * 2.8, 0, 1);
 
       const titleY = -progress * vh * (isTablet ? 0.38 : 0.3);
