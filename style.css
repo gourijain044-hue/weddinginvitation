@@ -342,8 +342,8 @@ html, body {
     left: 50%;
     bottom: 0;
     transform-origin: 50% 100%;
-    transform: translate3d(-50%, var(--hero-trees-y, 0px), 0);
-    opacity: var(--hero-trees-opacity, 1);
+    transform: translate3d(-50%, var(--hero-trees-y, 35vh), 0);
+    opacity: var(--hero-trees-opacity, 0);
   }
 }
 

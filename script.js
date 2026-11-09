@@ -190,13 +190,13 @@ function updateScrollAnimations() {
         : (0.7 + progress * 0.4);
 
       const treesTravel = isMobile
-        ? (1 - progress)
+        ? Math.max(0, 1 - progress / 0.7)
         : Math.max(0, 1 - Math.min(1, (progress - 0.12) / 0.82));
       const treesY = isMobile
-        ? 0
+        ? (treesTravel * vh * 0.35)
         : (treesTravel * vh * 0.50);
       const treesOpacity = isMobile
-        ? 1
+        ? clamp((progress - 0.05) * 3.5, 0, 1)
         : clamp((progress - 0.08) * 2.8, 0, 1);
 
       const titleY = -progress * vh * (isTablet ? 0.38 : 0.3);
