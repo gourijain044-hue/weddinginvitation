@@ -18,6 +18,7 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, 'index.html'),
         invite: path.resolve(__dirname, 'invite.html'),
+        meenaya: path.resolve(__dirname, 'meenaya.html'),
       },
     },
   },

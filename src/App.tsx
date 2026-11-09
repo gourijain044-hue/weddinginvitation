@@ -23,33 +23,42 @@ interface CardItem {
   demoUrl: string;
 }
 
-// Currently we have 1 card template built: Tirupati Sacred Vedic Union
+// Templates Catalog
 const CARDS: CardItem[] = [
+  {
+    id: 'meenaya-pastel',
+    title: 'Meenaya Traditional Pastel',
+    subtitle: 'Blue Canvas Sky · Sacred Gopuram · Floating Lanterns',
+    badge: 'New Template',
+    image: '/images/cards/meenaya-cover.webp',
+    demoUrl: '/meenaya.html',
+  },
   {
     id: 'tirupati-vedic',
     title: 'Sacred Vedic Union',
     subtitle: 'Tirupati Mandap · Vedic Rituals · Music & RSVP',
-    badge: 'Active Template',
+    badge: 'Classic Template',
     image: '/images/cards/tirupati-cover.webp',
     demoUrl: '/invite.html',
   },
 ];
 
 export default function App() {
-  const currentCard = CARDS[0];
+  const [selectedCardIndex, setSelectedCardIndex] = useState(0);
+  const currentCard = CARDS[selectedCardIndex];
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [copied, setCopied] = useState(false);
 
   // Form State for dynamic invitation link
   const [formData, setFormData] = useState({
-    bride: 'Dharani',
-    groom: 'Manu',
+    bride: 'Kavya',
+    groom: 'Vishu',
     date: '19 November 2026',
     time: '07:00 PM',
     functionName: 'Wedding Ceremony & Reception',
-    venue: 'BWSSB Rajatha Bhavan',
-    address: 'Malleshwaram, Bangalore',
-    mapUrl: 'https://maps.google.com/?q=BWSSB+Rajatha+Bhavan+Malleshwaram+Bangalore',
+    venue: 'Meenakshi Sundareswarar Temple Gardens',
+    address: 'Madurai, Tamil Nadu',
+    mapUrl: 'https://maps.google.com/?q=Meenakshi+Temple+Madurai',
   });
 
   const generateInviteLink = () => {
@@ -63,7 +72,7 @@ export default function App() {
       map: formData.mapUrl,
     });
     const baseUrl = window.location.origin;
-    return `${baseUrl}/invite.html?${params.toString()}`;
+    return `${baseUrl}${currentCard.demoUrl}?${params.toString()}`;
   };
 
   const inviteLink = generateInviteLink();
@@ -123,6 +132,23 @@ export default function App() {
           <p className="text-xs text-neutral-500 mt-1">
             Click on the card to customize details and generate your shareable guest link
           </p>
+        </div>
+
+        {/* Template Selector Tabs */}
+        <div className="flex items-center gap-2 mb-6 bg-neutral-200/60 p-1.5 rounded-full">
+          {CARDS.map((card, idx) => (
+            <button
+              key={card.id}
+              onClick={() => setSelectedCardIndex(idx)}
+              className={`text-xs font-semibold px-4 py-2 rounded-full transition-all ${
+                selectedCardIndex === idx
+                  ? 'bg-white text-neutral-900 shadow-sm'
+                  : 'text-neutral-600 hover:text-neutral-900'
+              }`}
+            >
+              {card.title}
+            </button>
+          ))}
         </div>
 
         {/* ── THE CARD ── */}
