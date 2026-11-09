@@ -150,7 +150,7 @@ function measureLayout() {
   isMobile = vw <= 767;
   isTablet = vw >= 768 && vw <= 1100 && vh > vw;
   isDesktop = vw >= 761;
-  heroTravel = hero ? Math.max(1, hero.offsetHeight - vh) : (isMobile ? 1400 : 2000);
+  heroTravel = hero ? Math.max(1, hero.offsetHeight - vh) : (isMobile ? 500 : 2000);
 
   if (tableauSec) {
     const r = tableauSec.getBoundingClientRect();
@@ -199,10 +199,10 @@ function updateScrollAnimations() {
         ? clamp((progress - 0.05) * 3.5, 0, 1)
         : clamp((progress - 0.08) * 2.8, 0, 1);
 
-      const titleY = -progress * vh * (isTablet ? 0.38 : 0.3);
+      const titleY = -progress * vh * (isTablet ? 0.38 : (isMobile ? 0.25 : 0.3));
       const titleScale = 1 - progress * 0.12;
-      const titleOpacity = clamp(1 - progress * (isTablet ? 3.2 : 1.8), 0, 1);
-      const cueOpacity = clamp(1 - progress * 2.4, 0, 1);
+      const titleOpacity = clamp(1 - progress * (isTablet ? 3.2 : (isMobile ? 2.8 : 1.8)), 0, 1);
+      const cueOpacity = clamp(1 - progress * (isMobile ? 3.0 : 2.4), 0, 1);
 
       const target = stage || document.documentElement;
       target.style.setProperty('--hero-temple-y', `${templeY.toFixed(1)}px`);

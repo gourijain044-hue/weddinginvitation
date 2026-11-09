@@ -286,8 +286,8 @@ html, body {
 /* Mobile responsive alignment */
 @media (max-width: 767px) {
   .hero {
-    height: calc(1400px + 100vh);
-    height: calc(1400px + 100dvh);
+    height: calc(500px + 100vh);
+    height: calc(500px + 100dvh);
   }
   .hero-title {
     width: 92%;
@@ -513,9 +513,13 @@ html, body {
   .invitation-section {
     min-height: max(720px, 177.78vw);
     height: auto;
-    margin-top: -2px;
+    margin-top: -1px;
     padding: 0;
     background: #f5efe4;
+  }
+  .invitation-section .invite-mandap {
+    transform: none !important;
+    will-change: auto !important;
   }
   .invite-copy {
     width: 66%;
