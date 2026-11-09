@@ -183,7 +183,7 @@ function updateScrollAnimations() {
       const o = 0;
 
       const templeY = isMobile
-        ? (59.3 - progress * 40.0)
+        ? (64.0 - progress * 40.0)
         : (vh * (i - progress * a) + o);
       const templeScale = isMobile
         ? (1.0 + progress * 0.08)

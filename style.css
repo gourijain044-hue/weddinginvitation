@@ -334,7 +334,7 @@ html, body {
     max-width: none;
     bottom: 0;
     transform-origin: 50% 100%;
-    transform: translate3d(-50%, var(--hero-temple-y, 59.3%), 0) scale(var(--hero-temple-scale, 1.0));
+    transform: translate3d(-50%, var(--hero-temple-y, 64.0%), 0) scale(var(--hero-temple-scale, 1.0));
   }
   .hero-rocks {
     width: 125%;
