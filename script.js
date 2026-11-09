@@ -183,10 +183,10 @@ function updateScrollAnimations() {
       const o = 0;
 
       const templeY = isMobile
-        ? Math.max(0, vh * 0.28 * (1 - progress))
+        ? (59.3 - progress * 40.0)
         : (vh * (i - progress * a) + o);
       const templeScale = isMobile
-        ? (0.76 + progress * 0.24)
+        ? (1.0 + progress * 0.08)
         : (0.7 + progress * 0.4);
 
       const treesTravel = isMobile
@@ -205,7 +205,7 @@ function updateScrollAnimations() {
       const cueOpacity = clamp(1 - progress * (isMobile ? 3.0 : 2.4), 0, 1);
 
       const target = stage || document.documentElement;
-      target.style.setProperty('--hero-temple-y', `${templeY.toFixed(1)}px`);
+      target.style.setProperty('--hero-temple-y', isMobile ? `${templeY.toFixed(1)}%` : `${templeY.toFixed(1)}px`);
       target.style.setProperty('--hero-temple-scale', templeScale.toFixed(3));
       target.style.setProperty('--hero-trees-y', `${treesY.toFixed(1)}px`);
       target.style.setProperty('--hero-trees-opacity', treesOpacity.toFixed(3));
