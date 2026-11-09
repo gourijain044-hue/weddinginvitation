@@ -493,7 +493,6 @@ html, body {
   .motion-ready .reveal-section .closing-copy {
     opacity: 1 !important;
     translate: 0 !important;
-    transform: none !important;
     transition: none !important;
   }
   .invitation-section {
@@ -1192,8 +1191,9 @@ html, body {
   color: var(--maroon);
   position: absolute;
   top: 338px;
-  left: 50%;
-  transform: translate(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .story-heading span {
@@ -1221,8 +1221,9 @@ html, body {
   width: min(396px, 39vw);
   position: absolute;
   top: 590px;
-  left: 50%;
-  transform: translate(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .story-shot {
@@ -1265,8 +1266,9 @@ html, body {
   width: min(720px, 70vw);
   position: absolute;
   top: 1310px;
-  left: 50%;
-  transform: translate(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .story-copy p {
@@ -1306,19 +1308,30 @@ html, body {
 /* Mobile styles */
 @media (max-width: 767px) {
   .story-section {
-    min-height: max(780px, 185vw);
+    min-height: max(710px, 177.78vw);
     height: auto;
     position: relative;
     padding: 0;
+    overflow: hidden;
+  }
+  .story-section .section-art {
+    object-fit: fill;
+    object-position: center top;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
   }
   .story-heading {
-    width: 76%;
-    max-width: 290px;
+    width: 80%;
+    max-width: 320px;
     position: absolute;
-    top: clamp(110px, 16svh, 130px);
-    left: 50%;
-    transform: translateX(-50%);
+    top: clamp(66px, 9.8svh, 84px);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     text-align: center;
+    transform: none;
   }
   .story-heading span,
   .story-heading strong {
@@ -1326,41 +1339,48 @@ html, body {
   }
   .story-heading h2 {
     margin: 0;
-    font-size: clamp(38px, 11vw, 48px);
+    font-size: clamp(44px, 12.5vw, 54px);
     line-height: 1;
     white-space: nowrap;
     color: var(--maroon);
     font-family: 'Luxurious Script', cursive;
   }
   .story-gallery {
-    width: min(140px, 36vw);
+    width: min(212px, 53vw);
+    aspect-ratio: 510 / 730;
     height: auto;
     position: absolute;
-    top: clamp(250px, 36svh, 285px);
-    left: 50%;
-    transform: translateX(-50%);
+    top: clamp(126px, 18.2svh, 148px);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: none;
   }
   .story-gallery .story-shot {
-    border-radius: 12px;
+    border-radius: 6px;
     overflow: hidden;
   }
   .story-copy {
-    width: 82%;
-    max-width: 290px;
+    width: 78%;
+    max-width: 295px;
     position: absolute;
-    top: clamp(495px, 70svh, 535px);
-    left: 50%;
-    transform: translateX(-50%);
+    top: clamp(448px, 63.5svh, 474px);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     text-align: center;
+    transform: none;
   }
   .story-copy p {
-    margin-bottom: 7px;
-    font-size: clamp(8.5px, 2.3vw, 10px);
-    line-height: 1.45;
+    margin: 0 0 6px;
+    font-size: clamp(9px, 2.45vw, 10.5px);
+    line-height: 1.5;
+    color: #523e31;
+    font-family: 'Abhaya Libre', serif;
   }
   .story-copy span {
-    margin-top: 8px;
-    font-size: clamp(28px, 7.5vw, 36px);
+    margin-top: 10px;
+    font-size: clamp(30px, 8.5vw, 38px);
     line-height: 1;
     white-space: nowrap;
     color: var(--maroon);
